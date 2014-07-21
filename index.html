@@ -46,6 +46,7 @@
             max-width: 100%;
         }
         p { padding: 0 8%; }
+        input { width: 60%; }
     -->
     </style>
 <body>
@@ -57,6 +58,10 @@
                     In the meantime, check out
                     <a href="https://github.com/itagenten/flux140">Flux 140 Viewer on GitHub</a>.
                 </p>
+                <form action="register-for-beta.php" method="POST">
+                    <input name="email" title="Enter E-Mail address to register for closed beta. We never spam." type="email" placeholder="eMail address here for closed beta" required />
+                    <button type="submit">Submit</button>
+                </form>
                 <p>
                     Flux140 is
                     <a href="https://github.com/itagenten/flux140/blob/master/license.txt">MIT License</a>d
