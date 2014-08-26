@@ -15,7 +15,7 @@
                 So long, and thanks for all the fish.';
     $message = wordwrap($message, 70, "\r\n");
 
-    mail($to, $subject, $message, $headers);
+    mail($to, $subject, $message);
 ?>
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
