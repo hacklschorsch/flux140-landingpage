@@ -8,6 +8,14 @@
 
     fputcsv($fp, array_values($_POST));
     fclose($fp);
+
+    $to  = 'beta@flux140.de';
+    $subject = 'New subscription to Flux140 closed Beta';
+    $message = 'Howdy!\r\n' . array_values($_POST) . '\r\n has just joined the Flux140 community!\r\n 
+                So long, and thanks for all the fish.';
+    $message = wordwrap($message, 70, "\r\n");
+
+    mail($to, $subject, $message, $headers);
 ?>
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
