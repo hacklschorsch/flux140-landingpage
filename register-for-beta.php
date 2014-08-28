@@ -11,8 +11,7 @@
 
     $to  = 'beta@flux140.de';
     $subject = 'New subscription to Flux140 closed Beta';
-    $message = 'Howdy!\r\n' . array_values($_POST) . '\r\n has just joined the Flux140 community!\r\n 
-                So long, and thanks for all the fish.';
+    $message = "Howdy!\r\n" . $_POST['email'] . "\r\n has just joined the Flux140 community!\r\n So long, and thanks for all the fish.";
     $message = wordwrap($message, 70, "\r\n");
 
     mail($to, $subject, $message);
